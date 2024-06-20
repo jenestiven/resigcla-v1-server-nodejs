@@ -2,7 +2,7 @@
   "name": "resigcla-server",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "node --watch src/index.js",
