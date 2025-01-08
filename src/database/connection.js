@@ -1,11 +1,14 @@
+import dotenv from "dotenv";
 import pkg from "pg";
+
+dotenv.config();
 const { Pool } = pkg;
 
 const pool = new Pool({
-  user: "postgres",
-  database: "resigcla-v1",
-  password: "Alcol1rycoz",
-  host: "resigcla-v1.c0hz15humno9.us-east-1.rds.amazonaws.com",
+  user: process.env.USER,
+  database: process.env.DATABASE_NAME,
+  password: process.env.DATABASE_PASSWORD,
+  host: process.env.HOST,
   ssl: {
     rejectUnauthorized: false,
   },
